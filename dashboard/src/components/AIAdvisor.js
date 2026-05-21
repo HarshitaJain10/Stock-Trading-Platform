@@ -21,3 +21,5 @@ const getAIAdvice = async (symbol) => {
     console.error("AI error:", err);
   }
 };
+
+export default AIAdvisor;
