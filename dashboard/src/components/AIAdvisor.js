@@ -1,7 +1,12 @@
+const BASE_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3002"
+    : "https://stock-backend-eqlo.onrender.com";
+
 const getAIAdvice = async (symbol) => {
   try {
     const res = await axios.get(
-      `http://localhost:3002/ai/predict/${symbol}`
+      `${BASE_URL}/ai/predict/${symbol}`
     );
 
     console.log("AI response:", res.data);
